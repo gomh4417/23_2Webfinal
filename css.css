@@ -480,6 +480,8 @@ header{
 
 .proline li:hover > .text {
     opacity: 1;
+    display: unset;
+    
 }
 
 .proline{
@@ -493,6 +495,7 @@ header{
     margin-bottom: 3vh;
     color: #FFF;
     opacity: 0;
+    display: none;
 }
 
 /* conD */
