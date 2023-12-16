@@ -1,114 +1,551 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main</title>
-    <link rel="stylesheet" href="css.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-</head>
-<body style="overflow-x: hidden">
-    <header>
-        <div class="container">
-            <div class="logo"><img src="logo.png" id="logoimg"></div>
-                <ul class="nav_wrap">
-                    <li><a href="#">Introduction</a></li>
-                    <li><a href="#">Profile</a></li>
-                    <li><a href="#">Works</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            <div class="menu"><button id="menu_button"><span class="material-symbols-outlined">
-                menu
-                </span></button></div>
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css');
 
-            <div id="menubar">
-                    <a href="#">Introduction</a>
-                    <a href="#">Profile</a>
-                    <a href="#">Works</a>
-                    <a href="#">Contact</a>
-                    <button id="menu_close"><span class="material-symbols-outlined">
-                        close
-                        </span></button>
-            </div>
-        </div>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Pretendard';
+}
+
+a{
+    text-decoration: none;
+    color: #131313;
+}
+
+li{
+    list-style: none;
+}
 
 
-
-    </header>
-
-    <div class="conA">
-        <video muted autoplay loop data-keepplaying style="filter: brightness(20%); ">
-            <source src="bg.mp4">
-        </video>
-        <div class="scroll">
-            <span class="material-symbols-outlined">
-            mouse
-            </span>
-            <p>Scroll Down</p>
-        </div>
-    </div>
-
-    <div class="conB">
-        <div class="conB_wrap">
-            <h1>Introduction</h1>
-            <div class="conB_imgwrap">
-                <div class="conB_imgL"><img src="1.png"></div>
-                <div class="conB_imgC"><p>User Centered Design</p>
-                    <span class="material-symbols-outlined">add</span></div>
-                <div class="conB_imgR"><img src="2.png"></div>
-            </div>
-            <div class="link"><a href="https://www.tukorea.ac.kr/design/1978/subview.do" class="linkA">Link to official Site</a></div>
-        </div>
-    </div>
-
-    <div class="conC">
-        <div class="conC_wrap">
-            <h1>Profile Designer</h1>
-
-            <div class="profile_wrap">
-                <ul class="proline" id="prolinefirst">
-                    <a href="#"><li><span class="Ptext"><b class="proB">박건도<br><span style="font-size: 16px; font-weight: 400; font-style: normal;">미디어디자인공학과</span></b><div class="text"></div><a><img src="./img/pro1.png"></a></span></li></a>
-                    <a href="#"><li><span class="Ptext"><b class="proB">임소은<br><span style="font-size: 16px; font-weight: 400; font-style: normal;">미디어디자인공학과</span></b><div class="text"></div><a><img src="./img/pro2.png"></a></span></li></a>
-                </ul>
-                <ul class="proline">
-                    <a href="#"><li><span class="Ptext"><b class="proB">한현승<br><span style="font-size: 16px; font-weight: 400; font-style: normal;">미디어디자인공학과</span></b><div class="text"></div><a><img src="./img/pro3.png"></a></span></li></a>
-                    <a href="#"><li><span class="Ptext"><b class="proB">장지혜<br><span style="font-size: 16px; font-weight: 400; font-style: normal;">미디어디자인공학과</span></b><div class="text"></div><a><img src="./img/pro4.png"></a></span></li></a>
-                </ul>
-                <ul class="proline">
-                    <a href="#"><li><span class="Ptext"><b class="proB">이태균<br><span style="font-size: 16px; font-weight: 400; font-style: normal;">미디어디자인공학과</span></b><div class="text"></div><a><img src="./img/pro5.png"></a></span></li></a>
-                    <a href="#"><li><span class="Ptext"><b class="proB">윤주경<br><span style="font-size: 16px; font-weight: 400; font-style: normal;">미디어디자인공학과</span></b><div class="text"></div><a><img src="./img/pro6.png"></a></span></li></a>
-                </ul>
-            </div>
-
-            <div class="link"><a href="#" class="linkA">More View</a></div>
-        </div>
-    </div>
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+}
 
 
+.menu{
+    display: none;
+}
 
-</body>
+#menubar{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    align-items: end;
+    margin-top: 96px;
+    display: none;
+}
 
-<script>
+@media (max-width: 1600px) {
+    .scroll{
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .nav_wrap li a{
+        font-size: 12px;
+        display: none;
+    }
+
+    .menu {
+        display: block;
+        font-size: 20px;
+    }
+
+    #menu_button{
+        padding: 12px;
+        border: none;
+        background-color: rgba(0, 0, 0, 0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s;
+    }
+
+    #menu_button>span{
+        font-size: 40px;
+    }
+
+    #menu_button:hover{
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 100%;
+        color: #FFF;
+    }
+
+    #menubar{
+        display: none;
+        z-index: 15;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transition: all 1s;
+        transform: translateX(100vw);
+        background-color: rgba(0, 0, 0, 0.3);
+
+    }
+
+    #menubar a{
+        padding: 12px;
+        color: #FFF;
+    }
+    #menubar a:hover{
+        color: #999999;
+    }
+
+    #menubar button{
+        margin-right: 2%;
+        margin-bottom: 12px;
+        border: none;
+        padding: 12px;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0);
+        transition: 0.4s;
+    }
+
+    #menubar button span{
+        font-size: 40px;
+        color: #FFF;
+    }
+
+    #menubar button:hover{
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #999999;
+        border-radius: 100%;
+    }
+
+    .scroll {
+        display: none;
+    }
+
+    .conA{
+        height: none;
+    }
+
+    .conA video{
+        width: 100vw;
+        height: 520px;
+    }
+
+
+    .conB_imgwrap{
+        flex-direction: column;
+        gap: 32px 0;
+    }
+
+    .conB_imgwrap .conB_imgL{
+        width: 100%;
+    }
+
+    .conB_imgwrap .conB_imgR{
+        width: 100%;
+    }
+
+    .conB_wrap .link {
+        height: calc(80px - 30px);
+        font-size: 20px;
+    }
+
+    .conC_wrap .link {
+        height: calc(80px - 30px);
+        font-size: 20px;
+    }
+
+    .profile_wrap {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .profile_wrap ul{
+        margin-bottom: 20px;
+        
+    }
+
+    .proline li{
+        max-height: 150px;
+    }
     
-    let menu = document.querySelector('#menu_button');
-    let menuClose = document.querySelector('#menu_close');
-    let menubar = document.querySelector('#menubar');
+    .proline li a img{
+        object-fit: contain;
+        object-position: top;
+    }
 
 
-menu.addEventListener('click', function(){
-    menubar.style.transform = 'translateX(-1vw)'
-    menubar.style.transition = '1s'
-    menubar.style.zIndex = '10'
-    menubar.style.display = 'flex'
+}
 
-});
 
-menuClose.addEventListener('click', function(){
-    menubar.style.transform = 'translateX(100vw)'
-    menubar.style.transition = '1s'
-    menubar.style.zIndex = '10'
-});
+/*스크롤 마우스*/
+.scroll>span{
+    font-size: 60px;
 
-</script>
+}
 
-</html>
+@keyframes move{
+    from {
+        margin-bottom: 16px;
+    }
+
+    to {
+        margin-bottom: 8px;
+    }
+}
+
+.scroll>p{
+    margin: 0;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+header{
+    width: 100%;
+    height: 96px;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+    z-index: 90;
+    background-image: linear-gradient(-120deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.9) );
+    overflow: hidden;
+}
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+    height: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    display: flex;
+
+    height: 100%;
+    
+}
+
+.logo img{
+    height: 100%;
+}
+
+.nav_wrap{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    gap: 0px 48px;
+}
+
+.nav_wrap a{
+    text-transform: uppercase;
+}
+
+.nav_wrap a:hover{
+    color: #666666;
+}
+
+
+.nav_wrap a:after{
+    display: block;
+    content: '';
+    border-bottom: 3px solid black;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+    margin-top: 4px;
+}
+
+.nav_wrap a:hover:after{ transform: scaleX(1);}
+
+
+.scroll{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #FFF;
+    animation-name: move;
+    animation-duration: 1s;    
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    transition: 1s;
+}
+
+/*conA*/
+
+.conA{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.conA video{
+    width: 100%;
+    object-fit: cover;
+}
+
+/*conB*/
+
+.conB{
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+}
+
+.conB_wrap{
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 16vh;
+    padding-bottom: 8vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px 0;
+}
+
+.conB_imgwrap{
+    width: 100%;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 52px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+.conB_imgL{
+    width: 40%;
+    max-height: 620px;
+    transition: 0.2s;
+    display: flex;
+    overflow: hidden;
+    object-position: bottom;
+}
+
+.conB_imgL:hover{
+    filter: brightness(30%);
+}
+
+.conB_imgL:hover::after{
+    content: 'More View';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+    color: #FFF;
+    font-size: 24px;
+}
+
+
+.conB_imgL img{
+    width: 100%;
+    height: 100%;
+    object-position: bottom;
+}
+
+.conB_imgC{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 32px 0px;
+    font-size: 20px;
+    
+}
+
+.conB_imgC span{
+    font-size: 60px;
+}
+
+.conB_imgR{
+    width: 40%;
+    max-height: 620px;
+    transition: 0.2s;
+    display: flex;
+    overflow: hidden;
+    
+}
+
+.conB_imgR:hover{
+    filter: brightness(30%);
+}
+
+.conB_imgR:hover::after{
+    content: 'More View';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+    color: #FFF;
+    font-size: 24px;
+}
+
+
+.conB_imgR img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.link {
+    width: 100%;
+    height: 80px;
+    background-color: #9d9d9d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transition: 0.2s;
+}
+
+.link:hover{
+    background-color: #666666;
+}
+
+.link:hover > .linkA{
+    color: #FFF;
+    transition: 0.2s;
+}
+
+
+/* conC */
+
+.conC{
+    width: 100%;
+    height: 100%;
+    
+    padding: 0 20px;
+    
+}
+
+.conC_wrap{
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 16vh;
+    padding-bottom: 8vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px 0;
+}
+
+
+
+@media (min-width: 769px) {
+
+    #prolinefirst{
+        margin-left: -10px;
+    }
+    
+}
+
+.profile_wrap{
+    width: 100%;
+    height: auto;
+    margin-top: 52px;
+    gap: 0 20px;
+    display: flex;
+    margin-left: -20px;
+    
+}
+
+
+.proline{
+    transition: 0.4s;
+    display: flex;
+    gap: 0 20px;
+}
+
+.proline>li{
+    background-color: #C2D3E9;
+    max-height: 48vh;
+    min-height: 150px;
+    border-radius: 24px;
+    overflow: hidden;
+    
+}
+
+
+.proline li img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+
+.proline li:hover{
+    border-radius: 0px;
+
+}
+
+.proline a:hover > .Ptext {
+    opacity: 1;
+}
+
+
+.proline a:hover .proB {
+    opacity: 1;
+    transform: translateY(8vh);
+}
+
+.proline{
+    position: relative;
+}
+
+
+
+.Ptext{
+    transition: all 0.5s;
+    top: 0%;
+    position: absolute;
+    margin-bottom: 3vh;
+    color: #FFF;
+    opacity: 0;
+    width: calc(50% - 20px);
+    transform: translateX(-1.5%);
+    height: 100%;
+    border-radius: 24px;
+    transition: all 0.4s;
+    background-color: rgba(71, 71, 71, 0.3);
+
+}
+
+.Ptext:hover{
+    
+    border-top: 2vh black solid;
+    border-left: 1vw black solid;
+    border-right: 1vw black solid;
+    border-bottom: 10vh black solid;
+    border-radius: 0px;
+}
+
+.proB {
+    font-size: 24px;
+    font-weight: 400;
+    position: absolute;
+    color: #FFF;
+    
+    
+    bottom: 0;
+    z-index: 90;
+    transition: 0.5s;
+    opacity: 0;
+    pointer-events: none;
+    
+}
+
+/* conD */
