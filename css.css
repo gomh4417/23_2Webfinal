@@ -538,8 +538,6 @@ header{
     font-weight: 400;
     position: absolute;
     color: #FFF;
-    
-    
     bottom: 0;
     z-index: 90;
     transition: 0.5s;
