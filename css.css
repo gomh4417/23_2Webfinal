@@ -481,7 +481,7 @@ header{
 
 }
 
-.proline a:hover > .text {
+.proline a:hover > .Ptext {
     opacity: 1;
 }
 
@@ -504,7 +504,7 @@ header{
 
 
 
-.text{
+.Ptext{
     transition: all 0.5s;
     top: 0%;
     position: absolute;
@@ -519,7 +519,7 @@ header{
     
 }
 
-.text:hover{
+.Ptext:hover{
     border-top: 2vh black solid;
     border-left: 1vw black solid;
     border-right: 1vw black solid;
