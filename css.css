@@ -177,6 +177,14 @@ li{
         object-position: top;
     }
 
+    .text>b{
+        display: none;
+    }
+
+    .text>i{
+        display: none;
+    }
+
 }
 
 
