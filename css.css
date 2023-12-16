@@ -82,7 +82,7 @@ li{
     }
 
     #menubar{
-        display: flex;
+        display: none;
         z-index: 15;
         position: fixed;
         top: 0;
@@ -90,6 +90,7 @@ li{
         transition: all 1s;
         transform: translateX(100vw);
         background-color: rgba(0, 0, 0, 0.3);
+
     }
 
     #menubar a{
@@ -172,8 +173,7 @@ li{
     }
 
     .proline li{
-        max-width: 340px;
-        min-width: 220px;
+        max-height: 150px;
     }
     
     .proline li a img{
@@ -272,7 +272,7 @@ header{
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translateX(-100vw);
+    transform: translateX(-50%);
     text-align: center;
     color: #FFF;
     animation-name: move;
@@ -441,19 +441,28 @@ header{
     gap: 20px 0;
 }
 
+
+
+@media (min-width: 769px) {
+
+    #prolinefirst{
+        margin-left: -1vw;
+    }
+    
+}
+
 .profile_wrap{
     width: 100%;
+    height: auto;
     margin-top: 52px;
-    
     gap: 0 20px;
     display: flex;
     
 }
 
-.profile_wrap ul{
-    
+
+.proline{
     transition: 0.4s;
-    width: 100%;
     display: flex;
     gap: 0 20px;
 }
@@ -461,8 +470,7 @@ header{
 .proline>li{
     background-color: #C2D3E9;
     max-height: 48vh;
-    min-height: 340px;
-    width: 100%;
+    min-height: 150px;
     border-radius: 24px;
     overflow: hidden;
     
@@ -486,20 +494,13 @@ header{
 }
 
 
-.proline a:hover > .proB {
+.proline a:hover .proB {
     opacity: 1;
+    transform: translateY(8vh);
 }
 
 .proline{
     position: relative;
-}
-
-@media (min-width: 769px) {
-
-    #prolinefirst{
-        margin-left: -1vw;
-    }
-    
 }
 
 
@@ -516,14 +517,15 @@ header{
     border-radius: 24px;
     transition: all 0.4s;
     background-color: rgba(71, 71, 71, 0.3);
-    
+
 }
 
 .Ptext:hover{
+    
     border-top: 2vh black solid;
     border-left: 1vw black solid;
     border-right: 1vw black solid;
-    border-bottom: 11vh black solid;
+    border-bottom: 10vh black solid;
     border-radius: 0px;
 }
 
@@ -532,10 +534,10 @@ header{
     font-weight: 400;
     position: absolute;
     color: #FFF;
+    
+    
     bottom: 0;
     z-index: 90;
-    margin-left: 20px;
-    margin-bottom: 2.4vh;
     transition: 0.5s;
     opacity: 0;
     pointer-events: none;
@@ -543,21 +545,3 @@ header{
 }
 
 /* conD */
-.conD{
-    width: 100%;
-    height: 100%;
-    
-    padding: 0 20px;
-    
-}
-
-.conD_wrap{
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 16vh;
-    padding-bottom: 8vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px 0;
-}
