@@ -60,6 +60,12 @@ li{
         font-size: 1.3rem;
     }
 
+    .container{
+        max-width: 760px;
+        min-width: 360px;
+    }
+
+
     .nav_wrap li a{
         font-size: 12px;
         display: none;
