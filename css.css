@@ -165,6 +165,8 @@ li{
     .profile_wrap {
         flex-direction: column;
         margin-left: -20px;
+        align-items: center;
+        justify-content: center;
         
     }
 
