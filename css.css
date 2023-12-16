@@ -471,9 +471,9 @@ header{
 
 .proline li:hover{
     border-top: 2vh black solid;
-    border-left: 1.2vw black solid;
-    border-right: 1.2vw black solid;
-    border-bottom: 10vh black solid;
+    border-left: 1vw black solid;
+    border-right: 1vw black solid;
+    border-bottom: 11vh black solid;
     border-radius: 0px;
     transition: all 0.4s;
 }
