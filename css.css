@@ -264,7 +264,7 @@ header{
     justify-content: center;
     position: fixed;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
-    z-index: 90;
+    z-index: 99;
     background-image: linear-gradient(-120deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.9) );
     overflow: hidden;
 }
@@ -826,7 +826,7 @@ header{
     top:30%;
     position: absolute;
     transition: 2s;
-    z-index: 90;
+    z-index: 10;
     display: flex;
     align-items: center;
     width: 100%;
