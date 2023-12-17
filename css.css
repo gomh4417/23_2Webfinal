@@ -61,7 +61,9 @@ li{
     }
 
     .container{
+        z-index: 96;
         max-width: 760px;
+        min-width: 340px;
     }
 
 
@@ -70,9 +72,14 @@ li{
         display: none;
     }
 
+    header>.container{
+        padding: 20px 20px;
+    }
+
     .menu {
         display: block;
         font-size: 20px;
+        z-index: 99;
     }
 
     #menu_button{
@@ -218,6 +225,11 @@ li{
 
     .map_wrap>iframe{
         height: 240px;
+    }
+
+    .conF_wrap>.imgbox {
+        min-height: 240px;
+        
     }
 
     .cir{
@@ -753,7 +765,6 @@ header{
 }
 
 .conF_wrap{
-    margin-top: 52px;
     margin-left: auto;
     margin-right: auto;
     padding-top: 16vh;
@@ -762,25 +773,25 @@ header{
     flex-direction: column;
     align-items: center;
     gap: 20px 0;
+    position: relative;
 }
 
 
-.conF_wrap>div{
+.imgbox{
     display: flex;
     justify-content: center;
-}
-
-.conF_wrap>div>img{
+    background-image: url(./3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    width: 100%;
+    min-height: 562px;
     margin-top: 52px;
-    height: min-content;
-    width: 80%;
-    object-fit: contain;
-
 }
+
 
 .cir{
     background-color: #A5A5A5;
-    position: absolute;
     border-radius: 100%;
     transition: 0.4s all;
     justify-content: center;
@@ -792,27 +803,30 @@ header{
     min-width: 150px;
     min-height: 150px;
     text-align: center;
-
 }
 
-#cir1{
-    margin-top: 5%;
-    margin-left: 7%;
+#cirmove1{
+    margin-top: 1%;
+    margin-left: 15%;
+    position: absolute;
 }
 
-#cir2{
-    margin-top: 5%;
+#cirmove2{
+    margin-top: 1%;
     margin-left: -16%;
+    position: absolute;
 }
 
-#cir3{
+#cirmove3{
     margin-top: 15%;
-    margin-left: -65%;
+    margin-left: -80%;
+    position: absolute;
 }
 
-#cir4{
+#cirmove4{
     margin-top: 15%;
-    margin-left: -15%;
+    margin-left: -20%;
+    position: absolute;
 }
 
 .cir>p:nth-child(1){
@@ -836,7 +850,6 @@ header{
     z-index: 5;
     display: flex;
     align-items: center;
-    overflow: hidden;
     transform: translateY(-10%);
 }
 
