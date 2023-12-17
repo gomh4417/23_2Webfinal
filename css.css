@@ -425,6 +425,10 @@ li{
     width: 100%;
 }
 
+.intA{
+    margin-top: 240px;
+}
+
 .Inbot>.Inbot_wrap{
     padding-left: 72px;
 }
@@ -434,7 +438,10 @@ li{
     width: 100%;
 }
 
-
+.IconB>.Intop2{
+    margin-top: 100px;
+}
+    
 }
 
 
