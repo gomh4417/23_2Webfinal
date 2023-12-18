@@ -604,7 +604,7 @@ header{
 }
 
 .conB_imgL:hover::after{
-    content: 'More View';
+    content: 'Industrial Design Engineering';
     position: absolute;
     left: 50%;
     top: 50%;
@@ -647,7 +647,7 @@ header{
 }
 
 .conB_imgR:hover::after{
-    content: 'More View';
+    content: 'Media Design Engineering';
     position: absolute;
     left: 50%;
     top: 50%;
